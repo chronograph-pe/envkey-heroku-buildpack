@@ -20,6 +20,7 @@ if [ -f $ENV_DIR/ENVKEY ]; then
   curl -s -L -o envkey-source.tar.gz "${ENVKEY_URL}"
   tar zxf envkey-source.tar.gz envkey-source
   rm envkey-source.tar.gz
+  mkdir -p $BUILD_DIR/bin
   mv envkey-source $BUILD_DIR/bin
 
   echo "ENVKEY config var is set" | indent
